@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="Swimming/App.axaml" value="Swimming/Swimming.csproj" />
+        <entry key="Swimming/Views/ListHeatsView.axaml" value="Swimming/Swimming.csproj" />
+        <entry key="Swimming/Views/MainWindow.axaml" value="Swimming/Swimming.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

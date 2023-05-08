@@ -1,0 +1,43 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="using:Swimming.ViewModels"
+        mc:Ignorable="d" d:DesignWidth="450" d:DesignHeight="800"
+        x:Class="Swimming.Views.ListHeatsView"
+        Title="ListHeatsView"
+        x:Name="ThisWindow">
+    
+    <Design.DataContext>
+        <vm:ListHeatsVM/>
+    </Design.DataContext>
+    
+    <Grid>
+        <Border Grid.Row="0" Background="#182983">
+            <TextBlock 
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="40" FontFamily="Times New Roman" 
+                       FontWeight="Bold" Foreground="#ffeeb5">
+                Список заплывов
+            </TextBlock>
+        </Border>
+        
+        <Border Grid.Row="1" 
+                Background="#789fca">
+            <DataGrid Name="HeatsList"
+                      Items="{Binding Swim}"
+                      Margin="10">
+                <DataGrid.Columns>
+                    <DataGridTextColumn IsReadOnly="True" Header="Дата" Binding="{Binding }"/>
+                    <DataGridTextColumn IsReadOnly="True" Header="Дистанция" Binding="{Binding Distance}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Border>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+    </Grid>
+</Window>
